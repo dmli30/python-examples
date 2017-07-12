@@ -4,7 +4,7 @@ from openpyxl.utils import column_index_from_string
 
 def rowCopy (ws1,row1,ws2,row2):
     for cell in ws1[row1]:
-        ws2.cell(row=row2,column=column_index_from_string(cell.column)).value = cell.value
+        ws2[cell.column + str(row2)].value = cell.value
     return 0
 
 def blankRowInserter (N, M, fileName):
