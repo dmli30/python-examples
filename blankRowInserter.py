@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import openpyxl
-from openpyxl.utils import column_index_from_string
 
 def rowCopy (ws1,row1,ws2,row2):
     for cell in ws1[row1]:
