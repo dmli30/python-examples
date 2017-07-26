@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 def getClick(url):    #返回一个字典，键为文章标题，值为文章点击率
     r = requests.get(url)
-    page = BeautifulSoup(r.text, "html.parser").findAll('div', {'class': 'post multi'})
+    page = BeautifulSoup(r.text, "html.parser").find_all('div', {'class': 'post multi'})
     countDict = {}
     for article in page:
         try:
